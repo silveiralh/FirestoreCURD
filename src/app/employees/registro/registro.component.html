@@ -1,0 +1,21 @@
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+  <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id">
+  <input type="hidden" name="data_created" #data_created="ngModel" [(ngModel)]="service.formData.data_created" >
+  <div class="form-group">
+    
+    <!-- <div *ngIf="data_created.invalid && data_created.touched" class="validation-error">This field is required.</div> -->
+  </div>
+  <div class="form-group">
+    <input name="categoria" #categoria="ngModel" [(ngModel)]="service.formData.position" class="form-control" placeholder="Position">
+  
+      <input name="tipo" #tipo ="ngModel" [(ngModel)]="service.formData.tipo" class="form-control" placeholder="Entrada/Saída">
+    
+    
+      <input name="descricao" #descricao="ngModel" [(ngModel)]="service.formData.descricao" class="form-control" placeholder="Descricao">
+    
+      <input name="valor" #valor="ngModel" [(ngModel)]="service.formData.valor" class="form-control" placeholder="Valor">
+  
+    <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-info">SUBMIT</button>
+  </div>
+
+</form>

@@ -1,12 +1,13 @@
 export const environment = {
   production: true,
-  firebaseConfig : {
-    apiKey: "AIzaSyC5HgvavwA2qKpNF_twAXdR1eL7Y5cN-aM",
-    authDomain: "firestorecurd-jack.firebaseapp.com",
-    databaseURL: "https://firestorecurd-jack.firebaseio.com",
-    projectId: "firestorecurd-jack",
-    storageBucket: "firestorecurd-jack.appspot.com",
-    messagingSenderId: "1096959144652",
-    appId: "1:1096959144652:web:164ea2604e2d1dab"
+  firebaseConfig: {
+
+    apiKey: "AIzaSyDUox5R63lzRo45qtHDO06xKAArDRypk2w",
+    authDomain: "projeto-especial.firebaseapp.com",
+    databaseURL: "https://projeto-especial.firebaseio.com",
+    projectId: "projeto-especial",
+    storageBucket: "projeto-especial.appspot.com",
+    messagingSenderId: "273160471771",
+    appId: "1:273160471771:web:90cd80244a9bb70f"
   }
 };

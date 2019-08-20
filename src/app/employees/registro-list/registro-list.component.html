@@ -1,0 +1,28 @@
+<table class="table table-hover">
+    <thead class="bg-info text-light">
+      <th>Data</th>
+      <th>Tipo</th>
+      <th>Categoria</th>
+      <th>Descrição</th>
+      <th>Valor</th>
+      <th></th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let reg of list">
+        <td (click)="onEdit(reg)">{{reg.data_created}}</td>
+        <td (click)="onEdit(reg)">{{reg.tipo}}</td>
+        <td (click)="onEdit(reg)">{{reg.categoria}}</td>
+        <td (click)="onEdit(reg)">{{reg.descricao}}</td>
+        <td (click)="onEdit(reg)">{{reg.valor}}</td>
+        <td><a class="btn text-danger" (click)="onDelete(reg.id)"><i class="fa fa-trash"></i></a></td>
+      </tr>
+
+      <tr *ngIf="list.length == 0">
+        <td class="lead" colspan="4">No testes found. Start inserting using form.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+  <hr>
+  <small class="text-secondary" *ngIf="list.length > 0">Click on record to load it in form to edit.</small> 

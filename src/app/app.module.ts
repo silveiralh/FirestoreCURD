@@ -8,17 +8,17 @@ import { ToastrModule } from 'ngx-toastr';
 
 import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
-import { EmployeesComponent } from './employees/employees.component';
-import { EmployeeComponent } from './employees/employee/employee.component';
-import { EmployeeListComponent } from './employees/employee-list/employee-list.component';
-import { EmployeeService } from './shared/employee.service';
+import { RegistrosComponent } from './employees/registros.component';
+import { RegistroComponent } from './employees/registro/registro.component';
+import { RegistroListComponent } from './employees/registro-list/registro-list.component';
+import { RegistroService } from './shared/registro.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeesComponent,
-    EmployeeComponent,
-    EmployeeListComponent
+    RegistrosComponent,
+    RegistroComponent,
+    RegistroListComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +29,7 @@ import { EmployeeService } from './shared/employee.service';
     ToastrModule.forRoot()
   ],
   providers: [
-    EmployeeService
+    RegistroService
   ],
   bootstrap: [AppComponent]
 })
