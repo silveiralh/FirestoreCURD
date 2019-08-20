@@ -11,7 +11,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class RegistroListComponent implements OnInit {
 
-  list: Registro[];
+  list: Registro[]=[];
   
   constructor(private service: RegistroService,
     private firestore: AngularFirestore,

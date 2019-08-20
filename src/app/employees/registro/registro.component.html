@@ -6,15 +6,15 @@
     <!-- <div *ngIf="data_created.invalid && data_created.touched" class="validation-error">This field is required.</div> -->
   </div>
   <div class="form-group">
-    <input name="categoria" #categoria="ngModel" [(ngModel)]="service.formData.position" class="form-control" placeholder="Position">
-  
+    <input name="categoria" #categoria="ngModel" [(ngModel)]="service.formData.categoria" class="form-control" placeholder="Position" required>
+    </div><div class="form-group">
       <input name="tipo" #tipo ="ngModel" [(ngModel)]="service.formData.tipo" class="form-control" placeholder="Entrada/Saída">
-    
+    </div><div class="form-group">
     
       <input name="descricao" #descricao="ngModel" [(ngModel)]="service.formData.descricao" class="form-control" placeholder="Descricao">
-    
+    </div><div class="form-group">
       <input name="valor" #valor="ngModel" [(ngModel)]="service.formData.valor" class="form-control" placeholder="Valor">
-  
+    </div><div class="form-group">
     <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-info">SUBMIT</button>
   </div>
 

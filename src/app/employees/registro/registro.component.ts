@@ -22,28 +22,28 @@ export class RegistroComponent implements OnInit {
       form.resetForm();
     this.service.formData = {
       id: null,
-    data_created: '',
-    categoria: '' ,
-    descricao: '',
-    tipo: '',
-    valor: 0.00,
+      data_created: '',
+      categoria: '',
+      descricao: '',
+      tipo: '',
+      valor: 0.00,
     }
   }
- 
+
   onSubmit(form: NgForm) {
     let data = Object.assign({}, form.value);
-    delete data.id;
-    if (form.value.id == null){
+    // delete data.id;
+    if (form.value.id == null) {
       // Insert
       this.firestore.collection('registros').add(data);
-      this.toastr.success("Registro inserted in firestore database successfully!","Insert");
-    } 
-    else{
+      this.toastr.success("Registro inserted in firestore database successfully!", "Insert");
+    }
+    else {
       // Update
       this.firestore.doc('registros/' + form.value.id).update(data);
-      this.toastr.info("Registro updated in firestore database successfully!","Update");
+      this.toastr.info("Registro updated in firestore database successfully!", "Update");
     }
     this.resetForm(form);
   }
-  
+
 }
